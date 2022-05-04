@@ -70,3 +70,15 @@ p:nth-child(2) {
     color: whitesmoke;
     margin-right: 10px;
 }
+
+@media(max-width: 501px) {
+    body {
+        padding: 0 10px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .form {
+        padding: 30px 20px;
+    }
+}
