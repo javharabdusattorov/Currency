@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@500&family=IBM+Plex+Sans+Thai+Looped&family=Inconsolata:wght@500&family=M+PLUS+1:wght@600&family=Mukta&family=Nunito:wght@200;300;400;500;600&family=Palette+Mosaic&family=Poppins:wght@300;400;800&family=Press+Start+2P&family=Prompt:wght@300&family=Roboto&family=Smooch+Sans:wght@800&family=Supermercado+One&family=Work+Sans:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+/* LOADER... start*/
+.loader__container {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loader__container img {
+    width: 100%;
+}
+
+.loader__container.fade-out {
+    top: -120%;
+}
+/* LOADER... end*/
+
+body {
+    background: url('../img/currency.png');
+}
+
+input:focus {
+    outline: none;
+}
+
+.form {
+    background-color: rgba(128, 128, 128, 0.767);
+    padding: 60px 0;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    color: crimson;
+    text-align: center;
+}
+
+.userMoney {
+    background-color: rgba(128, 255, 0, 0.842);
+    border: 2px solid rgb(3, 144, 3);
+    padding: 6px 10px;
+    letter-spacing: 2px;
+    font-size: 17.2px;
+    color: rgba(34, 34, 34, 0.685);
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+    color: rgba(128, 255, 0, 0.842);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+p:nth-child(2) {
+    color: whitesmoke;
+    margin-right: 10px;
+}
