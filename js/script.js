@@ -11,14 +11,15 @@ const options = {
 	}
 };
 
-elForm.addEventListener('submit', function(e) {
+elForm.addEventListener('submit', async function(e) { // qaytaradi: Promise<void>
     e.preventDefault();
-    fetch(`https://currency-converter-pro1.p.rapidapi.com/convert?from=USD&to=UZS&amount=${elUserMoney.value}`, options)
-        .then(res => res.json())
-        .then(data => {
-            elUSD.innerHTML = `$ ${elUserMoney.value}`;
-            elUZS.innerHTML =  `${(new Intl.NumberFormat().format(data.result))} so'm`;
-        })
+
+    const response = await fetch(`https://currency-converter-pro1.p.rapidapi.com/convert?from=USD&to=UZS&amount=${elUserMoney.value}`, options)
+    const responseJSON = await response.json()
+    console.log(responseJSON);
+
+    elUSD.innerHTML = `$ ${elUserMoney.value}`;
+    elUZS.innerHTML =  `${(new Intl.NumberFormat().format(responseJSON.result))} so'm`;
 })
 
 // LOADER
